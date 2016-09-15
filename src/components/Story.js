@@ -22,6 +22,7 @@ class Story extends Component {
             <Button positive onClick={done ? onInProgress : onDone}><Icon name={done ? 'undo' : 'checkmark'}/>{done ? 'To In Progress' : 'To Done'}</Button>
             <Button negative onClick={() => this.setState({ deleting: true })}><Icon name="remove"/>Delete Story</Button>
             <Confirm
+              dimmer='blurring'
               content={`Are you sure that you want to delete the story "${name}"?`}
               confirmButton='Yes'
               active={this.state.deleting}
