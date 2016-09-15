@@ -10,7 +10,7 @@ class Home extends Component {
         <Image centered src="https://www.cintacs.com/img/web-software-development-firm-scrum-icon.png"/>
         <Header as="h1">Welcome to ScrumTool!</Header>
         <p>Your Open Source Scrum/Kanban Process Management Tool</p>
-        <Button to='/stories' color='blue' as={Link}><Icon name='rocket'/>Get Started</Button>
+        <Button size='large' to='/stories' color='blue' as={Link}><Icon name='rocket'/>Get Started</Button>
       </Container>
     )
   }

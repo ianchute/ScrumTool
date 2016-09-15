@@ -40,11 +40,14 @@ class Stories extends Component {
 
         <Divider/>
 
-        <Grid divided>
-          <Grid.Row columns={2}>
+        <Grid divided relaxed columns={2}>
+          <Grid.Row>
             <Grid.Column>
 
               <Header as='h1' textAlign='center'>In Progress</Header>
+
+              {stories.filter(story => !story.done).length === 0 ? (<Header as='h5' textAlign='center'>No stories in progress.</Header>) : ''}
+
               <Card.Group itemsPerRow={1} stackable={true}>
 
                 {stories.filter(story => !story.done).map(story => (
@@ -63,6 +66,8 @@ class Stories extends Component {
             <Grid.Column>
 
               <Header as='h1' textAlign='center'>Done</Header>
+
+              {stories.filter(story => story.done).length === 0 ? (<Header as='h5' textAlign='center'>No stories done.</Header>) : ''}
 
               <Card.Group itemsPerRow={1} stackable={true}>
 
