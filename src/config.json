@@ -1,0 +1,7 @@
+{
+  "globalTransition": {
+    "initialStyle": { "opacity": 0 },
+    "finalStyle": { "opacity": 1 },
+    "transition": "opacity 0.25s ease-in"
+  }
+}
